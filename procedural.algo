@@ -1,0 +1,35 @@
+PROCEDURE dot_product( V1,V2: ARRAY_OF INTEGER [10], VAR sum: INTEGER )
+VAR
+    i: INTEGER:= 0;
+BEGIN
+ sum := 0;
+  IF (V1.length <> V2.length) THEN
+         WRITE(" Vectors have different lengths");
+  ELSE
+         sum := NAN
+  END_IF
+    FOR i FROM 0 TO V1.length-1 DO
+        sum := sum + (V1[i] * V2[i]);
+    END_FOR 
+
+END
+
+
+
+ALGORITHM Dot product
+VAR
+
+ V1: ARRAY_OF INTEGER [10];
+ V2: ARRAY_OF INTEGER [10];
+ sum: INTEGER;
+
+BEGIN
+
+dot_product(V1,V2,sum)
+IF (sum = 0) THEN
+         WRITE ("V1 and V2 are orthogonal ");
+ELSE 
+ WRITE("V1 and V2 are not orthogonal")
+END_IF
+
+END
